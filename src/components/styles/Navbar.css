@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #060b26;
+  background: url(./nav-background.png);
   height: 60px;
   display: flex;
   justify-content: start !important;
@@ -10,22 +10,31 @@
   background: rgba(14, 14, 14, 1);
   transition: all 450ms ease;
 }
-.menu-bars {
-  margin-left: 0.5rem;
-  font-size: 0.5rem;
-  color: rgb(255, 255, 255);
-  background: none;
 
-  z-index: 3;
+.navbar-desktop {
+  text-align: center;
+  position: absolute;
+  left: 40%;
+  top: 20px;
 }
 
+.navbar-desktop ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.navbar-desktop ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu-bars {
+  display: none;
+}
 .menu-logo {
   transition: all 350ms ease;
-}
-.shift {
-  transform: translateX(200px);
-  transition: all 350ms ease;
-  transition-delay: 100ms;
 }
 
 .login-button {
@@ -100,8 +109,55 @@
   right: 10px;
 }
 
+.btn-group {
+  display: flex;
+  gap: 20px;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.model-content {
+  width: 80%;
+  padding: 32px;
+}
+
+.modal-image {
+  width: 100%;
+  border-left: 2px solid rgb(206, 206, 206);
+  border-radius: 0px 5px 5px 0px;
+  background: url(./login-wallpaper.jpg);
+  background-size: cover;
+}
+
 @media screen and (max-width: 700px) {
   .nav-menu {
     width: 150px;
+  }
+  .navbar-desktop {
+    display: none;
+  }
+  .menu-bars {
+    margin-left: 0.5rem;
+    font-size: 0.5rem;
+    color: rgb(255, 255, 255);
+    background: none;
+    display: block;
+    z-index: 3;
+  }
+  .nav-menu {
+    background-color: #060b26;
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
   }
 }

@@ -1,0 +1,31 @@
+.courses-container {
+  padding: 20px;
+}
+.courses-wrapper {
+  margin-top: 60px;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid rgb(230, 230, 230);
+}
+.language-courses {
+  display: flex;
+  flex-direction: row;
+}
+
+.language-courses .courses-card {
+  padding: 20px;
+}
+
+.language-courses .courses-card .courses-card-container {
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  background: linear-gradient(to top left, rgb(58, 13, 182), rgb(46, 17, 80));
+  border-radius: 5px;
+  border: 2px solid rgb(230, 230, 230);
+}
+
+.language-courses h1 {
+  color: white;
+  font-size: 20px;
+}

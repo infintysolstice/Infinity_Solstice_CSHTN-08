@@ -1,7 +1,35 @@
 import React from "react";
 import "./styles/home.css";
+import { Button } from "@mui/material";
 
 function Home() {
+  const featured = [
+    {
+      title: "Featured Author",
+      type: "author",
+      name: "Ramlal Yadav",
+      image: "./assets/images/man.png",
+      description:
+        "Check out the videos of this experienced and very profound programmer and learn on the way",
+    },
+
+    {
+      title: "Featured Package",
+      type: "package",
+      name: "Full Stack Web Dev Course",
+      image: "",
+      description:
+        "Take this course and go through basic trainings in learning full stack web development",
+    },
+    {
+      title: "Quizes and Assignments",
+      type: "quiz",
+      name: "Quick Quiz",
+      image: "",
+      description: "Test your skills and knowledge by taking this short quiz",
+    },
+  ];
+
   return (
     <div>
       <div className="homepage">
@@ -14,9 +42,14 @@ function Home() {
               learners can grasp knowledge and practice from this forever
               increasing database in the fields of Computers
             </p>
+            <div className="check-more-button">
+              <Button variant="outlined" color="primary">
+                Check more
+              </Button>
+            </div>
           </div>
           <div className="homepage-image">
-            <img src="./assets/images/documentation.jpg" />
+            <img src="./assets/images/online-teaching.png" />
           </div>
         </div>
         <div className="homepage-details-container">
@@ -27,51 +60,89 @@ function Home() {
       </div>
       <div className="featured">
         <div className="featured-container">
-          <div className="featured-heading">
-            <h1>Featured</h1>
+          <div className="featured-heading"></div>
+          <div className="featured-content">
+            <div className="featured-cards">
+              {featured.map((card) => {
+                return (
+                  <div>
+                    <FeaturedCard card={card} />
+                  </div>
+                );
+              })}
+              <div className="code-editors">
+                <div className="code-editor">
+                  <div className=" editor-image">
+                    <img src="./assets/images/Monaco_Code_Editor.png" />
+                  </div>
+                  <div className="editor-text">
+                    <div className="editor-heading">
+                      <h1>Code Editor</h1>
+                    </div>
+                    <div className="editor-description">
+                      <p>
+                        Try your programming skills with this free code editor
+                      </p>
+                    </div>
+                  </div>
+                  <div className="to-editor">
+                    <a className="btn btn-primary outlined" href="/codeeditor">
+                      Code Editor
+                    </a>
+                  </div>
+                </div>
+                <div className="code-editor">
+                  <div className=" editor-image">
+                    <img src="./assets/images/W3schools_Code_Editor.png" />
+                  </div>
+                  <div className="editor-text">
+                    <div className="editor-heading">
+                      <h1>Third Party Code Editor</h1>
+                    </div>
+                    <div className="editor-description">
+                      <p>
+                        Try your programming skills with this third party code
+                        editor and compiler.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="to-editor">
+                    <a
+                      className="btn btn-primary outlined"
+                      href="https://www.w3schools.com/tryit/"
+                    >
+                      Code Editor
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="featured-content">{featuredCard()}</div>
         </div>
       </div>
     </div>
   );
 }
 
-function featuredCard() {
+function FeaturedCard({ card }) {
   return (
-    <div className="featured-cards">
-      <div className="featured-card">
-        <div className="card-container author">
-          <div className="card-wrapper">
-            <div className="card-image">
-              <img src="../assets/images/man.png" />
-            </div>
-            <div className="card-title">
-              <h1>Ramlal Yadav</h1>
-            </div>
+    <div className="featured-card">
+      <div className="card-container">
+        <div className={`featured-card-header ${card.type}`}>
+          <h1>{card.title}</h1>
+        </div>
+        <div className="card-wrapper">
+          <div className={`card-title ${card.type}-title`}>
+            <h1>{card.name}</h1>
+          </div>
+          <div className={`card-description ${card.type}-description`}>
+            <h1>{card.description}</h1>
+          </div>
+          <a className={`btn explore checkout-${card.type}`}>Checkout</a>
+          <div className="card-image">
+            <img src={card.image} />
           </div>
         </div>
-        <h1>Featured Author</h1>
-      </div>
-      <div className="featured-card">
-        <div className="card-container package">
-          <div className="card-wrapper">
-            <div className="card-title">
-              <h1>Html + Css + AngularJs</h1>
-            </div>
-          </div>
-        </div>
-        <h1>Featured Package</h1>
-      </div>
-      <div className="featured-card">
-        <div className="card-container learn-now">
-          <div className="card-wrapper">
-            <div className="card-title">
-              <h1>Learn Js Now</h1>
-            </div>
-          </div>
-        </div>
-        <h1>Fast Learning</h1>
       </div>
     </div>
   );

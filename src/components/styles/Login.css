@@ -1,0 +1,9 @@
+.login-page h1 {
+  font-size: 30px;
+  color: #103272;
+  margin-bottom: 20px;
+}
+.login-form input {
+  margin-bottom: 20px;
+  width: 100%;
+}
