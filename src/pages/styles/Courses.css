@@ -1,12 +1,69 @@
 .courses-container {
   padding: 20px;
+  border-bottom: 2px solid rgb(230, 230, 230);
 }
 .courses-wrapper {
   margin-top: 60px;
   padding: 20px;
+  height: 500px;
+  background: url(./Courses_Vector.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
   border-radius: 5px;
   border: 2px solid rgb(230, 230, 230);
 }
+
+.courses-header {
+  position: absolute;
+  right: 60px;
+  top: 120px;
+}
+
+.courses-header h1 {
+  font-size: 160px;
+  color: white;
+  font-family: "Poppins";
+}
+
+.courses-description {
+  position: absolute;
+  right: 70px;
+  top: 300px;
+  width: 50%;
+  text-align: right;
+}
+
+.courses-description p {
+  color: white;
+  font-family: "Poppins";
+  font-size: 16px;
+}
+
+.courses-abstract {
+  position: absolute;
+  right: 100px;
+  top: 320px;
+}
+
+.courses-abstract img {
+  width: 250px;
+}
+
+.courses-new {
+  background: linear-gradient(
+    to top right,
+    rgb(217, 186, 255),
+    rgb(179, 177, 255)
+  );
+  width: fit-content;
+  border-radius: 10px;
+}
+
+.courses-new p {
+  padding: 20px;
+  color: rgb(0, 0, 0);
+}
+
 .language-courses {
   display: flex;
   flex-direction: row;
@@ -17,15 +74,69 @@
 }
 
 .language-courses .courses-card .courses-card-container {
-  padding: 20px;
-  width: 300px;
+  width: 264px;
+  height: 100px;
   text-align: center;
-  background: linear-gradient(to top left, rgb(58, 13, 182), rgb(46, 17, 80));
   border-radius: 5px;
   border: 2px solid rgb(230, 230, 230);
+  overflow: hidden;
+}
+
+.courses-card-wrapper {
+  padding: 5px;
+}
+
+.CSS {
+  background: url(./vector-background-courses.png);
+}
+
+.HTML {
+  background: url(./abstract-background-vector.jpg);
+}
+.JAVASCRIPT {
+  background: url(./ab_art.jpg);
+  background-position-y: 100px;
+}
+.MONGO {
+  background: url(./abstract-background-vector.jpg);
+  background-position-y: 60px;
+}
+.EXPRESS {
+  background: url(./vector-background-courses.png);
+  background-position-y: 100px;
+}
+.courses-card-design {
+  background-size: cover;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
 }
 
 .language-courses h1 {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 20px;
+}
+
+.video-player {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.courses-image img {
+  width: 400px;
+}
+
+.courses-card-title {
+  margin-top: 5px;
+}
+
+.courses-card-title h1 {
+  color: rgb(48, 36, 114);
+}
+
+.video-lectures-heading {
+  width: 100%;
+  text-align: center;
+  color: rgb(48, 47, 88);
+  margin-top: 10px;
 }

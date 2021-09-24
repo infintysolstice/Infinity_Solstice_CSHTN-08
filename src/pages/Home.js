@@ -8,7 +8,7 @@ function Home() {
       title: "Featured Author",
       type: "author",
       name: "Ramlal Yadav",
-      image: "./assets/images/man.png",
+      image: "./assets/images/author2.png",
       description:
         "Check out the videos of this experienced and very profound programmer and learn on the way",
     },
@@ -17,7 +17,7 @@ function Home() {
       title: "Featured Package",
       type: "package",
       name: "Full Stack Web Dev Course",
-      image: "",
+      image: "./assets/images/package.png",
       description:
         "Take this course and go through basic trainings in learning full stack web development",
     },
@@ -25,7 +25,7 @@ function Home() {
       title: "Quizes and Assignments",
       type: "quiz",
       name: "Quick Quiz",
-      image: "",
+      image: "./assets/images/quiz.png",
       description: "Test your skills and knowledge by taking this short quiz",
     },
   ];
@@ -86,7 +86,7 @@ function Home() {
                     </div>
                   </div>
                   <div className="to-editor">
-                    <a className="btn btn-primary outlined" href="/codeeditor">
+                    <a className="btn btn-outline-primary" href="/codeeditor">
                       Code Editor
                     </a>
                   </div>
@@ -108,7 +108,7 @@ function Home() {
                   </div>
                   <div className="to-editor">
                     <a
-                      className="btn btn-primary outlined"
+                      className="btn btn-outline-primary"
                       href="https://www.w3schools.com/tryit/"
                     >
                       Code Editor

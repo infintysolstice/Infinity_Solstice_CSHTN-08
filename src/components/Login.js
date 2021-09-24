@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/Login.css";
-function Login() {
+function Login({ email, password, setEmail, setPassword }) {
   return (
     <div>
       <div className="login-page">
@@ -10,15 +10,19 @@ function Login() {
             type="text"
             className="form-control"
             name="username"
-            placeholder="Username or Email"
+            placeholder="Email"
+            value={email}
             required
+            onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="password"
             className="form-control"
             name="password"
+            value={password}
             placeholder="Password"
             required
+            onChange={(e) => setPassword(e.target.value)}
           />
         </form>
       </div>

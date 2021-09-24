@@ -1,0 +1,27 @@
+.css-container {
+  padding: 20px;
+}
+.css-wrapper {
+  border: 2px solid rgb(230, 230, 230);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.css-links {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.css-videos {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.close {
+  position: absolute;
+  right: 50px;
+}
