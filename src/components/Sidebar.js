@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const Sidebar = () => {
-    return (
-        <div>Sidebar</div>
-
-    )
-}
-
-export default Sidebar;
-=======
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { SidebarData } from "../shared/sidebardata";
@@ -53,6 +41,7 @@ function SideBar() {
             <img
               src={"./assets/images/infinity_solstice_logo.png"}
               style={{ width: "200px" }}
+              alt=""
             />
           </div>
           <div className="login-button">
@@ -102,4 +91,3 @@ function SideBar() {
 }
 
 export default SideBar;
->>>>>>> faca7ff5cd9dac1a6b1d5ebbeb911f90fd47a57b

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const Home = () => {
-    return (
-        <div>
-            Home Page
-        </div>
-    )
-}
-
-=======
 import React from "react";
 import "./styles/home.css";
 
@@ -88,5 +76,4 @@ function featuredCard() {
     </div>
   );
 }
->>>>>>> faca7ff5cd9dac1a6b1d5ebbeb911f90fd47a57b
 export default Home;
