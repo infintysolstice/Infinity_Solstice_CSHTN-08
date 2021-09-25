@@ -202,6 +202,9 @@ function SideBar({ user, setUser, handleLogout }) {
               <li>
                 <a href="/courses">Courses</a>
               </li>
+              <li>
+                <a href="/contactus">Contact Us</a>
+              </li>
             </ul>
           </div>
           <div className="login-button">

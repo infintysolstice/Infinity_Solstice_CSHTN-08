@@ -6,7 +6,6 @@ import Team from "../components/Team";
 function About() {
   return (
     <div>
-      <SideBar />
       <Info />
       <Team />
     </div>

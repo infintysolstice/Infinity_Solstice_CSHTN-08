@@ -24,4 +24,10 @@ export const SidebarData = [
     icon: <FcIcons.FcGallery />,
     cName: "nav-text",
   },
+  {
+    title: "Contact Us",
+    path: "/contactus",
+    icon: <FcIcons.FcContacts />,
+    cName: "nav-text",
+  },
 ];
