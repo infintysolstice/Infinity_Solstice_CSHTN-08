@@ -26,6 +26,7 @@ function Home() {
       type: "quiz",
       name: "Quick Quiz",
       image: "./assets/images/quiz.png",
+      link: "/quiz",
       description: "Test your skills and knowledge by taking this short quiz",
     },
   ];
@@ -138,7 +139,9 @@ function FeaturedCard({ card }) {
           <div className={`card-description ${card.type}-description`}>
             <h1>{card.description}</h1>
           </div>
-          <a className={`btn explore checkout-${card.type}`}>Checkout</a>
+          <a className={`btn explore checkout-${card.type}`} href={card.link}>
+            Checkout
+          </a>
           <div className="card-image">
             <img src={card.image} />
           </div>

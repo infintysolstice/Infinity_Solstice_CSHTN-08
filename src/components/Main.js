@@ -5,6 +5,7 @@ import firebase, { db } from "../shared/firebase";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Courses from "../pages/Courses";
+import Course from "../pages/Course";
 import CodeEditor from "./CodeEditor";
 import Contact from "../pages/Contact";
 
@@ -189,6 +190,7 @@ function Main() {
           />
           <Route exact path="/codeeditor" component={() => <CodeEditor />} />
           <Route exact path="/contactus" component={() => <Contact />} />
+          <Route exact path="/quiz" component={() => <Course />} />
           <Redirect to="/home" />
         </Switch>
       </div>

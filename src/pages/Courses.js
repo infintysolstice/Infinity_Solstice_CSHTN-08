@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import "./styles/Courses.css";
 import VideoPlayer from "../components/VideoPlayer";
 import CssCard from "./Cards";
+import Course from "./Course";
 
 function Courses({
   cssData,
@@ -73,16 +73,10 @@ function Courses({
       });
     }
   };
-=======
-import React from "react";
-import Course from "./Course";
->>>>>>> 872ddc387dc3d0053374381dfa768249860f4bd0
-
   return (
     <div>
       <div className="courses">
         <div className="courses-container">
-<<<<<<< HEAD
           <div className="courses-wrapper">
             <div className="courses-image">
               <img src="./assets/images/e-learning-abstract-1.png" />
@@ -106,9 +100,6 @@ import Course from "./Course";
               <img src="./assets/images/courses_abstract.png" />
             </div>
           </div>
-=======
-          <Course />
->>>>>>> 872ddc387dc3d0053374381dfa768249860f4bd0
         </div>
       </div>
       <h1 className="video-lectures-heading">LANGUAGES</h1>

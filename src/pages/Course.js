@@ -1,23 +1,14 @@
-import React from 'react';
-<<<<<<< HEAD
-=======
-import Header from '../components/Header';
-import Quiz from '../components/Quiz';
-import SideBar from "../components/Sidebar";
->>>>>>> 872ddc387dc3d0053374381dfa768249860f4bd0
+import React from "react";
+import Header from "../components/Header";
+import Quiz from "../components/Quiz";
 
 const Course = () => {
-    return (
-        <div>
-<<<<<<< HEAD
-            Course Page
-=======
-            <SideBar />
-            <Header />
-            <Quiz />
->>>>>>> 872ddc387dc3d0053374381dfa768249860f4bd0
-        </div>
-    )
-}
+  return (
+    <div className="quiz-header">
+      <Header />
+      <Quiz />
+    </div>
+  );
+};
 
 export default Course;
