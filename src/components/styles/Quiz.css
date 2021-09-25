@@ -1,0 +1,16 @@
+.quiz{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quiz .image {
+    margin-top: 20px;
+    flex: 1 1 40rem;
+}
+
+.quiz .image img{
+    height: 65vh;
+    width: 100%;
+}
