@@ -67,6 +67,7 @@
 .language-courses {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .language-courses .courses-card {

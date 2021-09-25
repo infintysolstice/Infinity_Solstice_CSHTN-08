@@ -20,15 +20,12 @@ export default function CssCard({ data, setCardData }) {
                   <h1>{card?.author}</h1>
                 </div>
                 <div className="css-links">
-                  {card?.url?.map((links) => {
+                  {card.url.map((links) => {
                     return (
                       <div className="css-videos">
                         <VideoPlayer url={links} />
                       </div>
                     );
-                  })}
-                  {card?.video?.map((name) => {
-                    return <div>{name}</div>;
                   })}
                 </div>
               </div>

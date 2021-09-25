@@ -83,6 +83,7 @@ function SideBar({ user, setUser, handleLogout }) {
             break;
         }
       });
+    setOpen(false);
   };
 
   console.log(email);
@@ -95,6 +96,7 @@ function SideBar({ user, setUser, handleLogout }) {
       .add({ ...details })
       .then(() => {
         console.log("Posted Mail");
+        setLogin(!login);
       })
       .catch((error) => {
         console.log(error);
@@ -181,10 +183,12 @@ function SideBar({ user, setUser, handleLogout }) {
             />
           </div>
           <div className={`menu-logo ${sidebar == true ? "shift" : ""} `}>
-            <img
-              src={"./assets/images/infinity_solstice_logo.png"}
-              style={{ width: "200px" }}
-            />
+            <a href="/home">
+              <img
+                src={"./assets/images/infinity_solstice_logo.png"}
+                style={{ width: "200px" }}
+              />
+            </a>
           </div>
 
           <div className="navbar-desktop">
@@ -201,9 +205,15 @@ function SideBar({ user, setUser, handleLogout }) {
             </ul>
           </div>
           <div className="login-button">
-            <Button variant="contained" onClick={handleOpen}>
-              Login
-            </Button>
+            {user ? (
+              <Button variant="contained" onClick={handleLogout}>
+                Logout
+              </Button>
+            ) : (
+              <Button variant="contained" onClick={handleOpen}>
+                Login
+              </Button>
+            )}
           </div>
         </div>
         <Modal open={open} close={handleClose}>

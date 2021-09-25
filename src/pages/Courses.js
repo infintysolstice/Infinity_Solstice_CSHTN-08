@@ -3,7 +3,16 @@ import "./styles/Courses.css";
 import VideoPlayer from "../components/VideoPlayer";
 import CssCard from "./Cards";
 
-function Courses({ cssData, htmlData, jsData, mongoData, ejsData }) {
+function Courses({
+  cssData,
+  htmlData,
+  jsData,
+  mongoData,
+  ejsData,
+  fr,
+  backend,
+  fullStack,
+}) {
   const cards = [
     {
       title: "CSS",
@@ -27,6 +36,21 @@ function Courses({ cssData, htmlData, jsData, mongoData, ejsData }) {
     },
   ];
 
+  const category = [
+    {
+      title: "Front End",
+      data: fr,
+    },
+    {
+      title: "Backend",
+      data: backend,
+    },
+    {
+      title: "Full Stack",
+      data: fullStack,
+    },
+  ];
+
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -39,6 +63,14 @@ function Courses({ cssData, htmlData, jsData, mongoData, ejsData }) {
         console.log(id);
       }
     });
+    if (cardData == null) {
+      category.map((id) => {
+        if (id.title === card.title) {
+          setCardData(id.data);
+          console.log(id);
+        }
+      });
+    }
   };
 
   return (
@@ -70,7 +102,7 @@ function Courses({ cssData, htmlData, jsData, mongoData, ejsData }) {
           </div>
         </div>
       </div>
-      <h1 className="video-lectures-heading">VIDEO LECTURES</h1>
+      <h1 className="video-lectures-heading">LANGUAGES</h1>
       <div className="language-courses">
         {cards.map((card) => {
           return (
@@ -86,6 +118,24 @@ function Courses({ cssData, htmlData, jsData, mongoData, ejsData }) {
           );
         })}
       </div>
+
+      <h1 className="video-lectures-heading">CATEGORIES</h1>
+      <div className="language-courses">
+        {category.map((card) => {
+          return (
+            <div>
+              <Card
+                card={card}
+                handleOpen={handleOpen}
+                open={open}
+                handleClose={handleClose}
+                handleClick={handleClick}
+              />
+            </div>
+          );
+        })}
+      </div>
+
       {cardData ? <CssCard data={cardData} setCardData={setCardData} /> : null}
     </div>
   );

@@ -14,12 +14,54 @@ function Main() {
   const [backendData, setBackendData] = useState(null);
   const [mongoData, setMongoData] = useState(null);
   const [ejsData, setEjsData] = useState(null);
-
   const [user, setUser] = useState("");
 
   const handleLogout = (e) => {
     firebase.auth().signOut();
   };
+
+  const authorCard = [
+    {
+      author: "Net Ninja",
+      url: [
+        "https://youtu.be/hu-q2zYwEYs",
+        "https://youtu.be/mbeT8mpmtHA",
+        "https://youtu.be/YwbIeMlxZAU",
+        "https://youtu.be/I9XRrlOOazo",
+        "https://youtu.be/4BEyFVufmM8",
+        "https://youtu.be/iqTgros3FTc",
+        "https://youtu.be/qoSksQ4s_hg",
+        "https://youtu.be/VB7y0yxZjro",
+        "https://youtu.be/ranSYb-EhrU",
+      ],
+    },
+  ];
+
+  const fr = [
+    {
+      author: "Front End",
+      url: [
+        "https://youtu.be/hu-q2zYwEYs ",
+        "https://youtu.be/mbeT8mpmtHA ",
+        "https://youtu.be/I9XRrlOOazo",
+        "https://youtu.be/qoSksQ4s_hg",
+      ],
+    },
+  ];
+
+  const fullStack = [
+    {
+      author: "Full Stack",
+      url: [
+        "https://youtu.be/hu-q2zYwEYs ",
+        "https://youtu.be/mbeT8mpmtHA ",
+        "https://youtu.be/I9XRrlOOazo",
+        "https://youtu.be/qoSksQ4s_hg",
+        "https://youtu.be/XeDM28c5kO4",
+        "https://youtu.be/KtnHb7FMk2Q",
+      ],
+    },
+  ];
 
   useEffect(() => {
     db.collection("css")
@@ -138,6 +180,9 @@ function Main() {
                 jsData={jsData}
                 mongoData={mongoData}
                 ejsData={ejsData}
+                fr={fr}
+                backend={backendData}
+                fullStack={fullStack}
               />
             )}
           />

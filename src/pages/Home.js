@@ -43,9 +43,9 @@ function Home() {
               increasing database in the fields of Computers
             </p>
             <div className="check-more-button">
-              <Button variant="outlined" color="primary">
+              <a className="btn btn-outline-primary" href="/courses">
                 Check more
-              </Button>
+              </a>
             </div>
           </div>
           <div className="homepage-image">
