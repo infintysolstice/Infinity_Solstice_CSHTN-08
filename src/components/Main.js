@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Courses from "../pages/Courses";
 import CodeEditor from "./CodeEditor";
+import Contact from "../pages/Contact";
 
 function Main() {
   const [cssData, setCssData] = useState(null);
@@ -187,6 +188,7 @@ function Main() {
             )}
           />
           <Route exact path="/codeeditor" component={() => <CodeEditor />} />
+          <Route exact path="/contactus" component={() => <Contact />} />
           <Redirect to="/home" />
         </Switch>
       </div>
