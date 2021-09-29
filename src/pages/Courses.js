@@ -39,15 +39,15 @@ function Courses({
 
   const category = [
     {
-      title: "Front End",
+      title: "FRONT END",
       data: fr,
     },
     {
-      title: "Backend",
+      title: "BACKEND",
       data: backend,
     },
     {
-      title: "Full Stack",
+      title: "FULL STACK",
       data: fullStack,
     },
   ];
@@ -134,6 +134,22 @@ function Courses({
             </div>
           );
         })}
+      </div>
+
+      <h1 className="video-lectures-heading">QUIZ</h1>
+      <div className="language-courses">
+        <div>
+          <div className="courses-card">
+            <a href="/quiz" className="btn courses-card-container-quiz">
+              <div className="courses-card-wrapper">
+                <div className={`courses-card-design QUIZ`}></div>
+                <div className="courses-card-title">
+                  <h1>TAKE A QUIZ</h1>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
 
       {cardData ? <CssCard data={cardData} setCardData={setCardData} /> : null}

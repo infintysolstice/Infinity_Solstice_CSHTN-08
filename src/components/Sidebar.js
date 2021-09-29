@@ -160,6 +160,7 @@ function SideBar({ user, setUser, handleLogout }) {
       .catch((error) => {
         console.log(error);
       });
+    setOpen(false);
   };
 
   useEffect(() => {

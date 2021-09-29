@@ -83,26 +83,39 @@
   overflow: hidden;
 }
 
+.language-courses .courses-card .courses-card-container-quiz {
+  width: 600px;
+  height: 100px;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid rgb(230, 230, 230);
+  overflow: hidden;
+}
+
 .courses-card-wrapper {
   padding: 5px;
 }
 
-.CSS {
+.CSS,
+.FULL {
   background: url(./vector-background-courses.png);
 }
 
 .HTML {
   background: url(./abstract-background-vector.jpg);
 }
-.JAVASCRIPT {
+.JAVASCRIPT,
+.FRONT {
   background: url(./ab_art.jpg);
   background-position-y: 100px;
 }
-.MONGO {
+.MONGO,
+.BACKEND {
   background: url(./abstract-background-vector.jpg);
   background-position-y: 60px;
 }
-.EXPRESS {
+.EXPRESS,
+.QUIZ {
   background: url(./vector-background-courses.png);
   background-position-y: 100px;
 }

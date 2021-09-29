@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Tooltip, Zoom } from "@mui/material";
+import "./styles/contact.scss";
+import "./styles/homepage.scss";
 
 const Contact = () => {
   const [submit, setSubmit] = useState(false);
